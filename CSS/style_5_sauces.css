@@ -33,7 +33,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 10vh; /* ใช้ 10% ของความสูงของ viewport ทั้งสองข้าง */
     padding-left: 220px; /* ใช้ 10% ของความกว้างของ viewport */
     padding-right: 220px;
 }
