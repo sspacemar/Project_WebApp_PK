@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toppings</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style_4_toppings.css">
+    <link rel="icon" href="css/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+    <div class="header">
+        <h1>Toppings</h1>
+    </div>
+    <div class="home-container">
+        <a href="1_home_page.html">
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </div>
+    <div class="type-container">
+        <button class="button" id="general-button">General</button>
+        <button class="button" id="fruits-button">Fruits</button>
+    </div>
+    <!-- general content-->
+    <div class="general-content">
+        <div class="topping-item Conflakes" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Conflake', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Conflakes.png"
+            alt="Conflake">
+        </div>
+        <div class="topping-item Almond" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Almond', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Almonds.png"
+            alt="Almond">
+        </div>
+        <div class="topping-item Granola" data-price="0">
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Granola.png"
+            alt="Granola">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Granola', 0)"></i>
+        </div>
+        <div class="topping-item Cookie" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Cookie', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Cookie.png"
+            alt="Cookie">
+        </div>
+        <div class="topping-item Red-Jelly" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Red Jelly', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/RedJelly.png"
+            alt="Red Jelly">
+        </div>
+        <div class="topping-item Bubble" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Bubble', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Bubble.png"
+            alt="Bubble">
+        </div>
+        <div class="topping-item Bubble-Brown" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Bubble Brown Sugar', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/BubbleBrown.png"
+            alt="Bubble Brown Sugar">
+        </div>
+        <div class="topping-item Marshmallow" ddata-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Marshmallow', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Marshmallow.png"
+            alt="Marshmallow">
+        </div>
+        <div class="topping-item Oatmeal" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Oatmeal', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/OatmealT.png"
+            alt="Oatmeal">
+        </div>
+        <div class="topping-item Cashew-nut" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Cashew Nut', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Cashew-nut.png"
+            alt="Cashew Nut">
+        </div>
+        <div class="topping-item Raisin" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Raisin', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Raisin.png"
+            alt="Raisin">
+        </div>
+        <div class="topping-item Pipo" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Pipo', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Pipo.png"
+            alt="Pipo">
+        </div>
+        <div class="topping-item CocoaCrunch" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Cocoa Crunch', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/CocoaCrunch.png"
+            alt="Cocoa Crunch">
+        </div>
+        <div class="topping-item Whipped-Cream" data-price="10฿">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Whipping Cream', 10)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/WhippedCream.png"
+            alt="Whipping Cream">
+        </div>
+        <div class="topping-item Kitkat" data-price="10฿">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('KitKat', 10)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/KitKat.png"
+            alt="KitKat">
+        </div>
+    </div>
+
+    <!-- fruits content -->
+    <div class="fruits-content" style="display: none;">
+        <div class="topping-item Strawberry" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Strawberry', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/StrawberryT.png"
+            alt="Strawberry">
+        </div>
+        <div class="topping-item Banana" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Banana', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Banana.png"
+            alt="Banana">
+        </div>
+        <div class="topping-item Kiwi" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Kiwi', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Kiwi.png"
+            alt="Kiwi">
+        </div>
+        <div class="topping-item Blueberry" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Blueberry', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Blueberry.png"
+            alt="Blueberry">
+        </div>
+        <div class="topping-item Mulberry" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Mulberry', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Mulberry.png"
+            alt="Mulberry">
+        </div>
+        <div class="topping-item Mango" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Mango', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Mango.png"
+            alt="Mango">
+        </div>
+        <div class="topping-item Avocado" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Avocado', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Avocado.png"
+            alt="Avocado">
+        </div>
+        <div class="topping-item Grape" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Grape', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Grape.png"
+            alt="Grape">
+        </div>
+        <div class="topping-item Orange" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Orange', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Orange.png"
+            alt="Orange">
+        </div>
+        <div class="topping-item Lychee" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Lychee', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Lychee.png"
+            alt="Lychee">
+        </div>
+        <div class="topping-item Apple" data-price="0">
+            <i class="fa-solid fa-cart-shopping" onclick="addToCart('Apple', 0)"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Apple.png"
+            alt="Apple">
+        </div>
+    </div>
+
+    <script>
+        //ส่วนของปุ่น
+        const generalContent = document.querySelector('.general-content');
+        const fruitsContent = document.querySelector('.fruits-content');
+
+        const generalButton = document.getElementById('general-button');
+        const fruitsButton = document.getElementById('fruits-button');
+
+        generalContent.style.display = 'block';
+        fruitsContent.style.display = 'none';
+
+        generalButton.classList.add('active');
+
+        generalButton.addEventListener('click', function () {
+            generalContent.style.display = 'block';
+            fruitsContent.style.display = 'none';
+
+            generalButton.classList.add('active');
+            fruitsButton.classList.remove('active');
+        });
+
+        fruitsButton.addEventListener('click', function () {
+            generalContent.style.display = 'none';
+            fruitsContent.style.display = 'block';
+
+            fruitsButton.classList.add('active');
+            generalButton.classList.remove('active');
+        });
+
+        const toppingItems = document.querySelectorAll('.topping-item');
+
+        toppingItems.forEach(item => {
+            item.addEventListener('click', function () {
+                // คุณสามารถดำเนินการเพิ่มสินค้าลงในตะกร้าที่นี่
+                // เช่น เรียกฟังก์ชันที่เพิ่มสินค้าลงในตะกร้า
+                // addProductToCart(item);
+                // หรือแสดงข้อความเตือน
+                alert('The product has been added to the cart!!');
+            });
+        });
+
+
+        //ส่วนของการเพิ่มสินค้าลงตะกร้า
+        const cartItems = [];
+
+        // เลือกทุกไอคอน "เพิ่มลงในตะกร้า" แล้วเพิ่มเหตุการณ์การคลิก
+        const addToCartIcons = document.querySelectorAll('.fa-cart-shopping');
+        addToCartIcons.forEach(icon => {
+            icon.addEventListener('click', function (event) {
+                addToCart(event);
+                alert('The product has been added to the cart!');
+            });
+        });
+
+        function addToCart(event) {
+            const selectedItem = event.target.parentElement; // เลือกข้อมูลของรายการที่เลือก
+            const itemName = selectedItem.querySelector('img').alt; // ชื่อของรายการสินค้า
+            const itemPrice = selectedItem.dataset.price || '0';
+
+            // สร้าง Element ของรายการสินค้าที่จะเพิ่มลงในตะกร้า
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+            <h3>${itemName}</h3>
+            <p>${itemPrice}</p>
+        `;
+
+            // เพิ่มรายการสินค้าลงในตะกร้า
+            const cartItemsContainer = document.querySelector('.cart-items');
+            cartItemsContainer.appendChild(cartItem);
+
+            cartItems.push({ name: itemName, price: itemPrice });
+        }
+
+    </script>
+
+
+    <div class="button-back-next">
+        <a href="3_flavors.html">
+            <button id="backButton">BACK</button>
+        </a>
+        <a href="5_sauces.html">
+            <button id="nextButton">NEXT</button>
+        </a>
+    </div>
+</body>
+
+</html>

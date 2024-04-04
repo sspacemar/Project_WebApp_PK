@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/style_3_flavors.css">
+    <link rel="icon" href="css/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Flavors</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Flavors</h1>
+    </div>
+    <div class="home-container">
+        <a href="1_home_page.html">
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </div>
+
+    <div class="flavor-container">
+        <div class="flavor-item Original">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Original.png"
+                class="imgOriginal">
+        </div>
+        <div class="flavor-item Mixberry">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Mixberry.png"
+                class="imgMixberry">
+        </div>
+        <div class="flavor-item Strawberry">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Strawberry.png"
+                class="imgStberry">
+        </div>
+        <div class="flavor-item Oatmeal">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Oatmeal.png"
+                class="imgOatmeal">
+        </div>
+        <div class="flavor-item Peach">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Peach.png"
+                class="imgPeach">
+        </div>
+        <div class="flavor-item GreekYogurt">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Original.png"
+                class="imgOriginal">
+        </div>
+    </div>
+
+    <div class="button-back-next">
+        <a href="2_sizes.html">
+            <button id="backButton">BACK</button>
+        </a>
+        <a href="4_toppings.html">
+            <button id="nextButton">NEXT</button>
+        </a>
+    </div>
+    <div class="container">
+        <div class="cart-items">
+            <!-- ที่นี่จะเพิ่มรายการสินค้าที่เลือกเข้าตะกร้า -->
+        </div>
+    </div>
+
+    <script>
+        // ถ้ามีการคลิกที่ไอคอนจะ "เพิ่มลงในตะกร้า"
+        const addToCartIcons = document.querySelectorAll('.fa-cart-shopping');
+        addToCartIcons.forEach(icon => {
+            icon.addEventListener('click', function (event) {
+                addToCart(event)
+                alert('The product has been added to the cart!');
+            });
+        });
+
+            function addToCart(event) {
+                const selectedItem = event.target.parentElement; // เลือกข้อมูลของรายการที่เลือก
+                const itemName = selectedItem.querySelector('img').alt; // ชื่อของรายการสินค้า
+                const itemPrice = "Price goes here"; // ราคาของรายการสินค้า (เป็นตัวอย่าง)
+
+                // Element ของรายการสินค้าที่จะเพิ่มลงในตะกร้า
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+        <h3>${itemName}</h3>
+        <p>${itemPrice}</p>
+        <button class="remove-from-cart-btn">Remove</button>
+    `;
+
+                // เพิ่มรายการสินค้าลงในตะกร้า
+                const cartItemsContainer = document.querySelector('.cart-items');
+                cartItemsContainer.appendChild(cartItem);
+            }
+    </script>
+</body>
+
+</html>

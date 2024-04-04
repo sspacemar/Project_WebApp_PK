@@ -1,0 +1,283 @@
+h1 {
+    font-size: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 50px;
+    padding: 25px;
+    font-family: "Arial", sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.home-container a {
+    position: fixed;
+    top: 55px;
+    right: 70px;
+    z-index: 1000;
+    font-size: 40px;
+    color: #C33432;
+    transition: color 0.3s ease;
+}
+
+.home-container a:hover {
+    color: darkred;
+}
+
+/* ส่วนของปุ่ม general, fruits */
+.type-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    position: fixed; /* ให้ปุ่ม General และ Fruits ติดอยู่ด้านบนของหน้าจอตลอดเวลา */
+    top: 0;
+    left: 0;
+    right: 0;
+    
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 0px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.button.active {
+    background-color: #333;
+    color: #fff;
+}
+
+
+.general-button {
+    border-right: 0px solid #ccc;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px
+}
+
+.fruits-button {
+    border-left: 0px solid #ccc;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px
+}
+
+.general-content,
+.fruits-content {
+    display: grid;
+    gap: 20px; /* ระยะห่างระหว่างกล่อง */
+    padding: 170px;
+    padding-left: 200px;
+    padding-right: 200px;
+    font-family: "Arial", sans-serif;
+}
+
+/* ปุ่ม General */
+#general-button {
+    background-color: #ddd;
+    color: #333;
+}
+
+#general-button.active {
+    background-color: #C33432;
+    color: #fff;
+}
+
+/* ปุ่ม Fruits */
+#fruits-button {
+    background-color: #ddd;
+    color: #333;
+}
+
+#fruits-button.active {
+    background-color: #C33432;
+    color: #fff;
+}
+
+.topping-item {
+    width: calc(33.33% - 20px);
+    height: 20em;
+    border-radius: 9%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.topping-item:hover {
+    background-color: #C33432
+}
+.general-content .topping-item::before {
+    content: "Conflakes";
+    white-space: pre;
+    position: absolute;
+    bottom: 22px;
+    left: 15px;
+    padding: 10px;
+    border: 2px;
+    display: inline-block;
+    ;
+    background-color: white;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 120px;
+    height: auto;
+}
+
+.general-content .topping-item:nth-child(2):before {
+    content: "Almonds";
+}
+.general-content .topping-item:nth-child(3):before {
+    content: "Granola";
+}
+.general-content .topping-item:nth-child(4):before {
+    content: "Cookies";
+}
+.general-content .topping-item:nth-child(5):before {
+    content: "Red Jelly";
+}
+.general-content .topping-item:nth-child(6):before {
+    content: "Bubble";
+}
+.general-content .topping-item:nth-child(7):before {
+    content: "Bubble Brown\ASugar Konjac";
+}
+.general-content .topping-item:nth-child(8):before {
+    content: "Marshmallow";
+}
+.general-content .topping-item:nth-child(9):before {
+    content: "Oatmeal";
+}
+.general-content .topping-item:nth-child(10):before {
+    content: "Cashew nut";
+}
+.general-content .topping-item:nth-child(11):before {
+    content: "Raisin";
+}
+.general-content .topping-item:nth-child(12):before {
+    content: "Pipo";
+}
+.general-content .topping-item:nth-child(13):before {
+    content: "Cocoa Crunch";
+}
+.general-content .topping-item:nth-child(14):before {
+    content: "Whipping Cream\A (+10฿)";
+}
+.general-content .topping-item:nth-child(15):before {
+    content: "KitKat\A (+10฿)";
+}
+
+.fruits-content .topping-item::before {
+    content: "Strawberry";
+    white-space: pre;
+    position: absolute;
+    bottom: 22px;
+    left: 15px;
+    padding: 10px;
+    border: 2px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 85px;
+    height: auto;
+}
+
+.fruits-content .topping-item:nth-child(2):before {
+    content: "Banana";
+}
+.fruits-content .topping-item:nth-child(3):before {
+    content: "Kiwi";
+}
+.fruits-content .topping-item:nth-child(4):before {
+    content: "Blueberry";
+}
+.fruits-content .topping-item:nth-child(5):before {
+    content: "Mulberry";
+}
+.fruits-content .topping-item:nth-child(6):before {
+    content: "Mango";
+}
+.fruits-content .topping-item:nth-child(7):before {
+    content: "Avocado";
+}
+.fruits-content .topping-item:nth-child(8):before {
+    content: "Grape";
+}
+.fruits-content .topping-item:nth-child(9):before {
+    content: "Orange";
+}
+.fruits-content .topping-item:nth-child(10):before {
+    content: "Lychee";
+}
+.fruits-content .topping-item:nth-child(11):before {
+    content: "Apple";
+}
+
+.topping-item i {
+    color: gray;
+    position: absolute;
+    right: 15px;
+    font-size: 16px;
+    border: 2px;
+    background-color: white;
+    border: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 256px;
+    margin-left: 10px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.topping-item img {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 45px;
+}
+
+/* ส่วนของปุ่ม back,next */
+.button-back-next {
+    position: static;
+    bottom: 8px;
+    right: 8.5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.button-back-next button {
+    margin-left: 0.5px;
+}
+
+.button-back-next a {
+    margin-left: 10px;
+}
+
+#backButton, #nextButton {
+    background-color: #C33432;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#backButton:hover, #nextButton:hover {
+    background-color: #9C2927;
+}

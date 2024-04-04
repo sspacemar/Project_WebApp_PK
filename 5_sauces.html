@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/style_5_sauces.css">
+    <link rel="icon" href="css/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Sauce</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Sauce</h1>
+    </div>
+    <div class="home-container">
+        <a href="1_home_page.html">
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </div>
+
+    <div class="sauce-container">
+        <div class="sauce-item SweetenedCondensedMilk">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/milk.png" class="imgMilk">
+        </div>
+        <div class="sauce-item Chocolate">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Chocolate.png" class="imgChoc">
+        </div>
+        <div class="sauce-item StrawberryJam">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/STjam.png" class="imgSTjam">
+        </div>
+        <div class="sauce-item BlueberryJam">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/BJam.png" class="imgBjam">
+        </div>
+        <div class="sauce-item Honey">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Honey.png" class="imgHoney">
+        </div>
+        <div class="sauce-item Caramel">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <img src="/Users/perish/Desktop/academia/2nd Semester2/Wep App/Project/page/image/Caramel.png" class="imgCaramel">
+        </div>
+    </div>
+
+    <div class="button-back-next">
+        <a href="4_toppings.html">
+            <button id="backButton">BACK</button>
+        </a>
+        <a href="6_cart.html">
+            <button id="nextButton">NEXT</button>
+        </a>
+    </div>
+</body>
+<div class="container">
+    <div class="cart-items">
+        <!-- ที่นี่จะเพิ่มรายการสินค้าที่เลือกเข้าตะกร้า -->
+    </div>
+</div>
+
+<script>
+    // ถ้ามีการคลิกที่ไอคอนจะ "เพิ่มลงในตะกร้า"
+    const addToCartIcons = document.querySelectorAll('.fa-cart-shopping');
+    addToCartIcons.forEach(icon => {
+        icon.addEventListener('click', function (event) {
+            addToCart(event)
+            alert('The product has been added to the cart!');
+        });
+    });
+
+        function addToCart(event) {
+            const selectedItem = event.target.parentElement; // เลือกข้อมูลของรายการที่เลือก
+            const itemName = selectedItem.querySelector('img').alt; // ชื่อของรายการสินค้า
+            const itemPrice = "Price goes here"; // ราคาของรายการสินค้า (เป็นตัวอย่าง)
+
+            // Element ของรายการสินค้าที่จะเพิ่มลงในตะกร้า
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+    <h3>${itemName}</h3>
+    <p>${itemPrice}</p>
+    <button class="remove-from-cart-btn">Remove</button>
+`;
+
+            // เพิ่มรายการสินค้าลงในตะกร้า
+            const cartItemsContainer = document.querySelector('.cart-items');
+            cartItemsContainer.appendChild(cartItem);
+        }
+</script>
+
+</html>
