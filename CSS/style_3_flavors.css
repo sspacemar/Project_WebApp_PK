@@ -44,7 +44,6 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 170px;
     padding-left: 250px;
     padding-right: 250px;
 }
